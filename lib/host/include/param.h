@@ -110,6 +110,8 @@ struct penglai_enclave_user_param
   unsigned long schrodinger_offset;
   unsigned long schrodinger_size;
   unsigned long retval;
+  unsigned long mage_ptr;
+  unsigned long mage_size;
 };
 
 struct penglai_shmget_param
@@ -182,6 +184,8 @@ struct enclave_args
   int shmid;
   unsigned long shm_offset;
   unsigned long shm_size;
+  unsigned long mage_ptr;
+  unsigned long mage_size;
 };
 
 void enclave_args_init(struct enclave_args* enclave_args);

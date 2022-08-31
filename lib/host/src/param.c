@@ -9,4 +9,6 @@ void enclave_args_init(struct enclave_args* enclave_args)
   enclave_args->shmid = 0;
   enclave_args->shm_offset = 0;
   enclave_args->shm_size = 0;
+  enclave_args->mage_ptr = 0;
+  enclave_args->mage_size = 0;
 }

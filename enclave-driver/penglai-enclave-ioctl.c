@@ -189,6 +189,16 @@ int penglai_enclave_create(struct file *filep, unsigned long args)
     goto destroy_enclave;
   }
 
+  if (enclave_param->mage_size > 0)
+  {
+    vaddr_t enclave_new_page = enclave_alloc_page(enclave->enclave_mem, 0x0000007000000000UL, ENCLAVE_USER_ROPAGE);
+    if(copy_from_user((void *)enclave_new_page, (void *)(enclave_param->mage_ptr), 4096))
+    {
+      penglai_eprintf("copy from the user for MAGE is failed\n");
+      return -EFAULT;
+    }
+  }
+
   free_mem = get_free_mem(&(enclave->enclave_mem->free_mem));
   shm_vaddr = get_shm(enclave_param->shmid, enclave_param->shm_offset, enclave_param->shm_size);
   shm_size = enclave_param->shm_size;

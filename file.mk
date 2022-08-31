@@ -2,6 +2,10 @@ SDK_FILES = \
 	$(srcdir)/Penglai-sdk-TVM/enclave-driver/penglai.ko \
 	$(srcdir)/Penglai-sdk-TVM/demo/host/host \
 	$(srcdir)/Penglai-sdk-TVM/demo/fork-host/fork-host \
+	$(srcdir)/Penglai-sdk-TVM/demo/host-mage/host-mage \
+	$(srcdir)/Penglai-sdk-TVM/demo/hello-mage-0/hello-mage-0 \
+	$(srcdir)/Penglai-sdk-TVM/demo/hello-mage-1/hello-mage-1 \
+	$(srcdir)/Penglai-sdk-TVM/demo/hello-mage-2/hello-mage-2 \
 	$(srcdir)/Penglai-sdk-TVM/demo/hello-world/hello-world \
 	$(srcdir)/Penglai-sdk-TVM/demo/relay-page/relay-page \
 	$(srcdir)/Penglai-sdk-TVM/demo/mem/mem \
